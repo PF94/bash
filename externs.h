@@ -291,9 +291,12 @@ extern int dup2 PARAMS((int, int));
 extern int getdtablesize PARAMS((void));
 #endif /* !HAVE_GETDTABLESIZE */
 
+// dogshit ducttape fix for duckos
+#if 0
 #if !defined (HAVE_GETHOSTNAME)
 extern int gethostname PARAMS((char *, int));
 #endif /* !HAVE_GETHOSTNAME */
+#endif
 
 extern int getmaxgroups PARAMS((void));
 extern long getmaxchild PARAMS((void));

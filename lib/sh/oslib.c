@@ -191,6 +191,8 @@ bzero (s, n)
 }
 #endif
 
+// dogshit ducttape fix for duckos
+#if 0
 #if !defined (HAVE_GETHOSTNAME)
 #  if defined (HAVE_UNAME)
 #    include <sys/utsname.h>
@@ -222,6 +224,7 @@ gethostname (name, namelen)
 }
 #  endif /* !HAVE_UNAME */
 #endif /* !HAVE_GETHOSTNAME */
+#endif
 
 #if !defined (HAVE_KILLPG)
 int
